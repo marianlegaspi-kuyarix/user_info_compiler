@@ -7,6 +7,7 @@ while True:
    while not (user_name.isalpha() and len(user_name) >= 2): #only accepts alphabet and atleast more than 2 characters long
       print("Not a valid name. Enter a name that only contains alpahabet and atleast 2 letters long.")
       user_name = input("Enter your name: ")
+      
    #for user age
    user_age = int(input("Enter your age: "))  
    while not ((user_age.is_integer()) and 0 <= int(user_age) <= 150):#only accepts integer between 0-150 
@@ -22,5 +23,9 @@ while True:
       break
    elif new_user_entry != "yes":
       print("Invalid answer.")
-   new_user_entry = input("Up for another entry (yes/no) ? ")
+      new_user_entry = input("Up for another entry (yes/no) ? ")
 
+#when user do not want to continue, it will display the oldest person 
+if users_info:
+   oldest_user = max(users_info, key=lambda user: user["Age"])
+print(f"Oldest user: \n{oldest_user}")
