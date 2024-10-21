@@ -12,10 +12,6 @@ while True:
    while not ((user_age.is_integer()) and 0 <= int(user_age) <= 150):#only accepts integer between 0-150 
       print("Not a valid age. Enter Age between 0 and 150.")
       user_age = int(input("Enter your age: "))
+   #stores the info in the list  
+   users_info.append({"Name": user_name, "Age": int(user_age)})
 
-
-   
-
-   
-
-   
