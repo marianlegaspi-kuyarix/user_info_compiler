@@ -15,3 +15,12 @@ while True:
    #stores the info in the list  
    users_info.append({"Name": user_name, "Age": int(user_age)})
 
+   #ask the user if they want to input another entry
+   new_user_entry = input("Up for another entry (yes/no) ? ")
+   #set a condition using if statements
+   if new_user_entry == "no":
+      break
+   elif new_user_entry != "yes":
+      print("Invalid answer.")
+   new_user_entry = input("Up for another entry (yes/no) ? ")
+
