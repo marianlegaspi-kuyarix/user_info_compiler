@@ -13,6 +13,7 @@ while True:
       try:
          user_age = int(input("Enter your age: "))  
          if 0 <= int(user_age) <= 150: #only accepts integer between 0-150
+            print(f"{'-'* 50}\nUser information:\nName:{user_name} \nAge: {user_age}\n{'-'* 50}")
             break
          else:
             print("Not a valid age. Enter Age between 0 and 150.")
@@ -21,17 +22,17 @@ while True:
 
    #stores the info in the list  
    users_info.append({"Name": user_name, "Age": int(user_age)})
-
+   
    #ask the user if they want to input another entry
    new_user_entry = input("Up for another entry (yes/no) ? ")
-   #set a condition using if statements
+      #set a condition using if statements
    if new_user_entry == "no":
       break
-   elif new_user_entry != "yes":
+   while new_user_entry != "yes":
       print("Invalid answer.")
       new_user_entry = input("Up for another entry (yes/no) ? ")
-
+   
 #when user do not want to continue, it will display the oldest person 
 if users_info:
    oldest_user = max(users_info, key=lambda user: user["Age"])
-print(f"Oldest user: \nName: {oldest_user['Name']}\nAge: {oldest_user['Age']}")
+print(f"{'-'* 50}\nOldest user: \nName: {oldest_user['Name']}\nAge: {oldest_user['Age']}\n{'-'* 50}")
